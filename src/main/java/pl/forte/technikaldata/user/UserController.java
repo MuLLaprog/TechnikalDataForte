@@ -38,5 +38,9 @@ public class UserController {
         return "Hello " + entityUser.getUsername();
     }
 
-
+    @GetMapping("/machins")
+    //@ResponseBody
+    public String login() {
+        return "machins/machins";
+    }
 }

@@ -14,9 +14,8 @@ public class HomeController {
 //    }
 
     @GetMapping("/")
-    @ResponseBody
     public String home() {
-        return "home";
+        return "redirect:/machins";
     }
 
     @GetMapping("/about")

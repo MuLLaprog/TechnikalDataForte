@@ -1,0 +1,34 @@
+body {
+    backdrop-color: #778899;
+    color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #c0D06F;
+    margin: 20px;
+}
+
+.log {
+    text-align: center;
+}
+
+.machins {
+    text-align: center;
+}
+
+.machins img {
+    width: 100%;
+    height: auto;
+}
+
+.machins p {
+    margin-bottom: 30px;
+}
+
+.machins figcaption {
+    margin-top: 8px;
+}
