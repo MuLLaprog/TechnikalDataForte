@@ -1,3 +1,4 @@
+#po dodaniu ctrl+s -> odswierza dane w .gitignore
 .idea
 *.iml
 target
