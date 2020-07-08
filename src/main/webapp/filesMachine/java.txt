@@ -1,0 +1,84 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fca34f829f6, pid=5048, tid=5390
+#
+# JRE version: OpenJDK Runtime Environment (11.0.6+8) (build 11.0.6+8-b765.40)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.6+8-b765.40, mixed mode, tiered, compressed oops, concurrent mark sweep gc, linux-amd64)
+# Problematic frame:
+# C  [libc.so.6+0x499f6]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P %E" (or dumping to /home/mullaak47/core.5048)
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xms128m -Xmx1375m -XX:ReservedCodeCacheSize=240m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -ea -XX:CICompilerCount=2 -Dsun.io.useCanonPrefixCache=false -Djdk.http.auth.tunneling.disabledSchemes="" -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -Djdk.attach.allowAttachSelf=true -Dkotlinx.coroutines.debug=off -Djdk.module.illegalAccess.silent=true -Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.renderer=sun.java2d.marlin.MarlinRenderingEngine -Dsun.tools.attach.tmp.only=true -XX:ErrorFile=/home/mullaak47/java_error_in_IDEA_%p.log -XX:HeapDumpPath=/home/mullaak47/java_error_in_IDEA.hprof -Didea.paths.selector=IntelliJIdea2020.1 -Djb.vmOptionsFile=/home/mullaak47/.config/JetBrains/IntelliJIdea2020.1/idea64.vmoptions -Didea.jre.check=true com.intellij.idea.Main
+
+Host: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, 4 cores, 10G, Ubuntu 20.04 LTS
+Time: Thu May 21 18:46:37 2020 CEST elapsed time: 44465 seconds (0d 12h 21m 5s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fc9bc143800):  JavaThread "AWT-XAWT" daemon [_thread_in_native, id=5390, stack(0x00007fc9c0b38000,0x00007fc9c0c39000)]
+
+Stack: [0x00007fc9c0b38000,0x00007fc9c0c39000],  sp=0x00007fc9c0c37740,  free space=1021k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x499f6]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 4201  sun.awt.X11.XlibWrapper.XEventsQueued(JI)I java.desktop@11.0.6 (0 bytes) @ 0x00007fca20b8b784 [0x00007fca20b8b740+0x0000000000000044]
+J 81995% c2 sun.awt.X11.XToolkit.run(Z)V java.desktop@11.0.6 (454 bytes) @ 0x00007fca22aebf00 [0x00007fca22aebce0+0x0000000000000220]
+j  sun.awt.X11.XToolkit.run()V+5 java.desktop@11.0.6
+j  java.lang.Thread.run()V+11 java.base@11.0.6
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 128 (SI_KERNEL), si_addr: 0x0000000000000000
+
+Register to memory mapping:
+
+RAX=0x0010790a00e25640 is an unknown value
+RBX=0x00007fca35124718: <offset 0x00000000001eb718> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007fca34f39000
+RCX=0xffffffffffffffb0 is an unknown value
+RDX=0x0000000000000001 is an unknown value
+RSP=0x00007fc9c0c37740 is pointing into the stack for thread: 0x00007fc9bc143800
+RBP=0x0000000000000001 is an unknown value
+RSI=0x0000000000000001 is an unknown value
+RDI=0x00007fc98e157428: <offset 0x0000000004227428> in /lib/x86_64-linux-gnu/libLLVM-9.so.1 at 0x00007fc989f30000
+R8 =0x0000000000000007 is an unknown value
+R9 =0x00007fca0006db7f points into unknown readable memory: 62
+R10=0x00007fc96bc4c753: <offset 0x000000000002a753> in /snap/intellij-idea-ultimate/222/jbr/lib/libjfxwebkit.so at 0x00007fc96bc22000
+R11=0x00007fca34fbe4c0: fflush+0x0000000000000000 in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007fca34f39000
+R12=0x0 is NULL
+R13=0x000000000000069d is an unknown value
+R14=0x00007fca35129fc8: <offset 0x00000000001f0fc8> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007fca34f39000
+R15=0x00007fca0006e660 points into unknown readable memory: e0 f1 06 00 ca 7f 00 00
+
+
+Registers:
+RAX=0x0010790a00e25640, RBX=0x00007fca35124718, RCX=0xffffffffffffffb0, RDX=0x0000000000000001
+RSP=0x00007fc9c0c37740, RBP=0x0000000000000001, RSI=0x0000000000000001, RDI=0x00007fc98e157428
+R8 =0x0000000000000007, R9 =0x00007fca0006db7f, R10=0x00007fc96bc4c753, R11=0x00007fca34fbe4c0
+R12=0x0000000000000000, R13=0x000000000000069d, R14=0x00007fca35129fc8, R15=0x00007fca0006e660
+RIP=0x00007fca34f829f6, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00007fc9c0c37740)
+0x00007fc9c0c37740:   0000000000000000 0000000100000000
+0x00007fc9c0c37750:   0000000000000000 00000000c00de3b0
+0x00007fc9c0c37760:   00007fc9bc02f720 0000000000000001
+0x00007fc9c0c37770:   0000000000000000 00007fc9c0c37810 
+
+Instructions: (pc=0x00007fca34f829f6)
+0x00007fca34f828f6:   de 04 00 e9 53 ff ff ff 66 90 f3 0f 1e fa 48 8b
+0x00007fca34f82906:   05 15 15 1a 00 8b 00 85 c0 75 0f e9 0a f7 ff ff
+0x00007fca34f82916:   66 2e 0f 1f 84 00 00 00 00 00 31 c0 c3 66 2e 0f
+0x00007fca34f82926:   1f 84 00 00 00 00 00 0f 1f 00 f3 0f 1e fa 41 57
+0x00007fca34f82936:   41 56 41 55 41 54 55 89 fd 53 48 89 f3 48 83 ec
+0x00007fca34f82946:   18 89 54 24 0c 84 c9 0f 85 35 02 00 00 4c 8d 35
+0x00007fca34f82956:   6e 76 1a 00 45 31 e4 0f 1f

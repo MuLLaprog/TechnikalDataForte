@@ -7,7 +7,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import pl.forte.technikaldata.user.SpringDataUserDetailsService;
 
 @Configuration
 @EnableWebSecurity//włączenie ustawien bezpieczenstwa dla aplikacji Spring
@@ -22,11 +21,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/machins").authenticated()
-                .antMatchers("/create-user").permitAll()
-               // .antMatchers("/about").authenticated()
+                .antMatchers("/login").permitAll()
+                .antMatchers("/users/addUser").permitAll()
+                .antMatchers("/users/**", "/machines/**", "/documents/**").authenticated()
+                //.antMatchers("/admin/**").hasRole("ADMIN")
+                //.antMatchers("/off").authenticated()//
+                //.and().logout().logoutSuccessUrl("/")//przekerowywuję po wylogowaniu
 
-                .and().formLogin();
+                // .antMatchers("/about").authenticated()
+
+                .and().formLogin().loginPage("/login");
     }
 
     @Bean

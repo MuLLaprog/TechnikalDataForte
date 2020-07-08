@@ -1,0 +1,266 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: mullaak47
+  Date: 21.06.2020
+  Time: 10:03
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body class="bg-warning">
+<h1 class="text-center">REJESTRACJA</h1>
+<img src="/img/forte.png" alt="" class="mx-auto d-block"><br>
+<section class="log">
+    <div class="container text-center">
+        <form:form method="post" modelAttribute="user">
+            <div class="form-group">
+                <label for="userId">Nazwa użytkownika:</label>
+                <form:input type="text" path="username" id="userId"/>
+                <form:errors path="username"/>
+<%--                <input type="text" class="form-control" id="userId" placeholder="Podaj nazwę użytkownika" name="uname" required>--%>
+<%--                <div class="valid-feedback">Poprawanie.</div>--%>
+<%--                <div class="invalid-feedback">Proszę wypełnić pole.</div>--%>
+            </div>
+            <div class="form-group">
+                <label for="password" class="control-label">Hasło</label>
+                <form:input type="password" path="password" id="passwordId"/>
+                <form:errors path="password"/>
+<%--                <input type="password" class="form-control" id="inputPassword" placeholder="Hasło" required name="ha">--%>
+<%--                <div class="valid-feedback">Poprawanie.</div>--%>
+            </div>
+<%--            <div><br></div>--%>
+<%--            <div class="form-group">--%>
+<%--                <label for="password" class="control-label">Powtórz hasło</label>--%>
+<%--&lt;%&ndash;                <form:input type="password" path="password" id="passwordId" placeholder="Powtórzenie hasła" name="ha2"/><br>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <form:errors path="password"/><br>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <input type="password" class="form-control" id="inputPasswordConfirm" placeholder="Powtórzenie hasła" required name="ha2">&ndash;%&gt;--%>
+<%--                <div class="valid-feedback">Poprawanie.</div>--%>
+<%--                <div class="help-block with-errors"></div>--%>
+<%--            </div>--%>
+<%--            <button type="submit" class="btn btn-light">Rejestruj</button>--%>
+            <input type="submit" value="Dodaj">
+        </form:form>
+    </div>
+</section>
+
+</body>
+</html>
+
+////////////////////////////////////////////////////////////
+Tworzenie pionowej linii
+
+Jacek Trakul • 18.05.2013 • HTML 5 • 0
+
+Dzięki kaskadowym arkuszom stylów można w łatwy sposób tworzyć pionowe linie. Poniżej przedstawiony jest przykład.
+XHTML
+<div style="border-left:1px solid black; height: 200px; width: 0"></div>
+1
+	
+<div style="border-left:1px solid black; height: 200px; width: 0"></div>
+
+Zamiast black można wpisać dowolny kolor, w którym będzie wyświetlana pionowa linia, natomiast wartość height odpowiada za długość linii.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<%--
+  Created by IntelliJ IDEA.
+  User: mullaak47
+  Date: 08.06.2020
+  Time: 18:52
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<%--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>--%>
+<%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>--%>
+<%--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>--%>
+</head>
+<body class="bg-warning">
+<h1 class="text-center">LOGOWANIE</h1>
+<img src="/img/forte.png" alt="" class="mx-auto d-block"><br>
+<%--    <section class="log">--%>
+<%--        <div class="container">--%>
+<%--            <form action="post" class="was-validated">--%>
+<%--                <div class="form-group">--%>
+<%--                    <label for="uname">Nazwa użytkownika:</label>--%>
+<%--                    <input type="text" class="form-control" id="uname" placeholder="Podaj nazwę użytkownika" name="username" required>--%>
+<%--                    <div class="valid-feedback">Poprawnie.</div>--%>
+<%--                    <div class="invalid-feedback">Proszę wypełnij to pole.</div>--%>
+<%--                </div>--%>
+<%--                <div class="form-group">--%>
+<%--                    <label for="pwd">Hasło:</label>--%>
+<%--                    <input type="password" class="form-control" id="pwd" placeholder="Podaj hasło" name="password" required>--%>
+<%--                    <div class="valid-feedback">Poprawnie.</div>--%>
+<%--                    <div class="invalid-feedback">Proszę wypełnij to pole.</div>--%>
+<%--                </div>--%>
+<%--                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>--%>
+<%--                <button type="submit" class="btn btn-primary">Zaloguj</button>--%>
+<%--            </form>--%>
+<div class="container text-center">
+    <form method="post">
+        <div class="text-center"><label>Nazwa użytkownika:<input type="text" name="username"/></label></div>
+        <div class="text-center"><label>Hasło:<input type="password" name="password"/></label></div>
+        <div class="text-center"><input type="submit" value="Zaloguj"/></div>
+        <input class="text-center" type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    </form>
+</div>
+<div class="text-center"><a href="/users/register" class="btn btn-light" role="button">Rejestracja</a></div>
+
+<%--        </div>--%>
+<%--    </section>--%>
+</body>
+</html>
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<section class="log">
+    <div class="container">
+        <form method="post" class="was-validated" data-toggle="validator" oninput='ha2.setCustomValidity(ha2.value !== ha.value ? "Hasła się nie zgadzają." : "")'>
+            <div class="form-group">
+                <label for="userId">Nazwa użytkownika:</label>
+                <input type="text" class="form-control" id="userId" placeholder="Podaj nazwę użytkownika" name="uname" required>
+                <div class="valid-feedback">Poprawanie.</div>
+                <div class="invalid-feedback">Proszę wypełnić pole.</div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label">Hasło</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Hasło" required name="ha">
+                <div class="valid-feedback">Poprawanie.</div>
+            </div>
+            <div><br></div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label">Powtórz hasło</label>
+                <input type="password" class="form-control" id="inputPasswordConfirm" placeholder="Powtórzenie hasła" required name="ha2">
+                <div class="valid-feedback">Poprawanie.</div>
+                <div class="help-block with-errors"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Rejestruj</button>
+        </form>
+    </div>
+</section>
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<%--
+  Created by IntelliJ IDEA.
+  User: mullaak47
+  Date: 08.06.2020
+  Time: 19:42
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Production Machines</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+        <section class="machines">
+             <div class="container">
+<%--             <div class="container-fluid"> lub to wyrzej--%>
+                     <header class="jumbotron text-center">
+                         <h1>Maszyny Zakładu Forte</h1>
+                         <p>W tej sekcji mamy możliwość wyboru maszyny, po wyborze maszyny ukażą nam się dostepne dokumentacje</p>
+                     </header>
+                        <c:forEach var="machine" items="${machine}">
+                            <tr>
+                                <td>${machine.nameMachine}</td>
+                                <td>
+
+                                </td>
+                            </tr>
+                        </c:forEach>
+                <div class="row">
+                     <div class="col-sm-6 col-sm-4 col-xl-3 offset-md-1">
+                         <a href="/allDocumentations/${machine.id}">
+
+                         </a>
+                            <div></div>
+
+<%--                             <img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre" width="304" height="236">--%>
+
+
+
+                             <figure>
+<%--                                 <a href="file:///ścieżka/plik"></a>--%>
+<%--                                  <a href="http://localhost:8080/machines/allMachines"><img src="ima1.jpg" calss="img-fluid" alt="IMA L1"></a>--%>
+                                  <a href="file:///home/mullaak47/Obrazy/java.txt"><img src="img/ima1.jpg" calss="img-fluid" alt="IMA L1"></a>
+
+                                  <figcaption>IMA L1</figcaption>
+                             </figure>
+
+
+                     </div>
+                     <div class="col-sm-6 col-sm-4 col-xl-3">
+                         <figure>
+                             <a href="#"><img src="img/ima2.jpg" calss="img-fluid" alt="IMA L2"></a>
+                             <figcaption>IMA L2</figcaption>
+                         </figure>
+                     </div>
+                     <div class="col-sm-6 col-sm-4 col-xl-3">
+                         <figure>
+                             <a href="#"><img src="img/imacombima.jpg" calss="img-fluid" alt="IMA COMBIMA"></a>
+                             <figcaption>IMA COMBIMA</figcaption>
+                         </figure>
+                     </div>
+                     <div class="col-sm-6 col-sm-4 col-xl-3">
+                         <figure>
+                             <a href="#"><img src="img/imanovimat.jpg" calss="img-fluid" alt="IMA NOVIMAT"></a>
+                             <figcaption>IMA NOVIMAT</figcaption>
+                         </figure>
+                     </div>
+                     <div class="col-sm-6 col-sm-4 col-xl-3">
+                         <figure>
+                             <a href="#"><img src="img/cnc.jpg" calss="img-fluid" alt="CNC"></a>
+                             <figcaption>CNC</figcaption>
+                         </figure>
+                     </div>
+                     <div class="col-sm-6 col-sm-4 col-xl-3">
+                         <figure>
+                             <a href="#"><img src="img/bst100.jpg" calss="img-fluid" alt="BST 100"></a>
+                             <figcaption>BST 100</figcaption>
+                         </figure>
+                     </div>
+                     <div class="col-sm-6 col-sm-4 col-xl-3">
+                         <figure>
+                             <a href="#"><img src="img/bst500.jpg" calss="img-fluid" alt="BST 500"></a>
+                             <figcaption>BST 500</figcaption>
+                         </figure>
+                     </div>
+                     <div class="col-sm-6 col-sm-4 col-xl-3">
+                         <figure>
+                             <a href="#"><img src="img/800_2.jpg" calss="img-fluid" alt="800 2"></a>
+                             <figcaption>800 2</figcaption>
+                         </figure>
+                     </div>
+                     <div class="col-sm-6 col-sm-4 col-xl-3">
+                         <figure>
+                             <a href="#"><img src="img/800_3.jpg" calss="img-fluid" alt="800 3"></a>
+                             <figcaption>800 3</figcaption>
+                         </figure>
+                     </div>
+                     <div class="col-sm-6 col-sm-4 col-xl-3">
+                         <figure>
+                             <a href="#"><img src="img/800_4.jpg" calss="img-fluid" alt="800 4"></a>
+                             <figcaption>800 4</figcaption>
+                         </figure>
+                     </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+

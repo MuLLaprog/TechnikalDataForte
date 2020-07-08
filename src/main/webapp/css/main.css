@@ -1,5 +1,5 @@
 body {
-    backdrop-color: #778899;
+    backdrop-color: #9a9c24;
     color: #efefef;
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
@@ -16,19 +16,23 @@ h1 {
     text-align: center;
 }
 
-.machins {
+.machines {
     text-align: center;
 }
 
-.machins img {
+.machines img {
     width: 100%;
     height: auto;
 }
 
-.machins p {
+.machines p {
     margin-bottom: 30px;
 }
 
-.machins figcaption {
+.machines figcaption {
     margin-top: 8px;
+}
+
+.nav {
+    min-height: 57px;
 }
